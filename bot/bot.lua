@@ -7,9 +7,9 @@ https = require "ssl.https"
 redis = require('redis')
 db = redis.connect('127.0.0.1', 6379)
 BASE = '../bot/'
-SUDO = 158955285 --sudo id
-sudo_users = {158955285,180191663,279700027,361871436,userid}
-BOTS = 361871436 --bot id
+SUDO = 70545327 --sudo id
+sudo_users = {45878609}
+BOTS = 262661662 --bot id
 bot_id = db:get(SUDO..'bot_id')
 function vardump(value)
   print(serpent.block(value, {comment=false}))
@@ -39,7 +39,7 @@ end
 end
 ------------------------------------------------------------
 function is_bot(msg)
-  if tonumber(BOTS) == 361871436 then
+  if tonumber(BOTS) == 262661662 then
     return true
     else
     return false
@@ -1214,7 +1214,7 @@ end
 	   bot.sendMessage(msg.chat_id_, msg.reply_to_message_id_, 1, "<code>>پیام مورد نظر شما پین شد.</code>", 1, 'html')
    end
 			 if text == 'bot' then
-          bot.sendMessage(msg.chat_id_, msg.id_, 1,'<b>tgGuard BOT Online!</b>', 1, 'html')
+          bot.sendMessage(msg.chat_id_, msg.id_, 1,'<b>miniultra BOT Online!</b>', 1, 'html')
       end
         if text and text:match('whois (%d+)') then
               local id = text:match('whois (%d+)')
@@ -1280,7 +1280,7 @@ help = [[متن راهنمای مالک ربات ثبت نشده است.]]
 
   elseif is_owner(msg) then
     help = [[
-	<code>>راهنمای مالکین گروه tgGuard(اصلی-فرعی)</code>
+	<code>>راهنمای مالکین گروه miniultra(اصلی-فرعی)</code>
 
 *<b>[/#!]settings</b> --<code>دریافت تنظیمات گروه</code>
 *<b>[/#!]setrules</b> --<code>تنظیم قوانین گروه</code>
